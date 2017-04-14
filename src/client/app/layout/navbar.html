@@ -1,5 +1,5 @@
-<section id="navbar-main">
-    <nav class="navbar navbar-default" ng-controller="NavbarController as vm">
+<section id="navbar-main" ng-controller="NavbarController as vm">
+    <!--<nav class="navbar navbar-default" ng-controller="NavbarController as vm">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
           <span class="sr-only">Toggle navigation</span>
@@ -29,5 +29,45 @@
             </ul>
 
         </div>
+    </nav>-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-top">
+            <div class="login">
+                <a href="/login">Login</a>
+            </div>
+            <ul class="social-login list-inline">
+                <li>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-panel">
+            <div class="navbar-brand">
+                <a href="/"><img class="logo" src="../images/logo.png" /></a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes">
+                    <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="hidden-sm hidden-md">{{'LANGUAGE'|translate}}</span> <span class="glyphicon glyphicon-menu-down"></span>
+
+                    </a>
+                    <div class="dropdown-menu">
+                        <a ng-click="vm.setLang('en')" translate="ENGLISH">English</a>
+                        <a ng-click="vm.setLang('es')" translate="CASTELLANO">Castellano</a>
+                        <a ng-click="vm.setLang('ca')" translate="CATALA">Catala</a>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+
     </nav>
     <section>

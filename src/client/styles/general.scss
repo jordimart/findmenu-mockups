@@ -3,31 +3,51 @@
 /*Stilo de la barra de navegación principal*/
 
 #navbar-main {
-    border-bottom: 2px solid black;
-    font-family: $font-stack;
-    .navbar-brand {
-        padding: 0px;
-        img {
-            height: 100%;
-            padding: 15px;
-            width: auto;
+    nav {
+        background-color: #0a1923;
+        border-color: #0a1923;
+        color: #42B574;
+        .navbar-top {
+            border-bottom: 0.5px solid grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            .social-login {
+                padding: 0px;
+                margin: 0px;
+                i {
+                    color: #42B574 !important;
+                }
+            }
+            .login {
+                a {
+                    color: #42B574 !important;
+                }
+            }
         }
-    }
-    .navbar {
-        background-color: $primary;
-        margin-bottom: 0px;
-        border: none;
-        border-radius: 0px;
-    }
-    ul {
-        li {
-            a {
-                display: block;
-                text-align: center;
-                text-decoration: none;
-                color: $secundary;
-                &:hover {
-                    color: $hovertext;
+        .navbar-panel {
+            .logo {
+                width: 165px;
+                height: 35px;
+                padding-left: 10px;
+            }
+            .navbar-nav {
+                li {
+                    padding-top: 8px;
+                    padding-bottom: 14px;
+                    a {
+                        padding-bottom: 6px;
+                        color: white;
+                        &:hover {
+                            border-bottom: 2px solid #42B574;
+                        }
+                    }
                 }
             }
         }
