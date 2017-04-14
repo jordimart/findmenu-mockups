@@ -52,7 +52,7 @@
                 <a href="/"><img class="logo" src="../images/logo.png" /></a>
             </div>
             <ul class="nav navbar-nav navbar-left">
-                <li ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes">
+                <li ng-class="{'active': vm.isCurrent(r)}" ng-repeat="r in vm.navRoutes">
                     <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
                 </li>
                 <!-- <li class="nav-item dropdown">

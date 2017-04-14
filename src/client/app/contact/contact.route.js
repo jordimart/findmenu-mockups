@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.home')
+        .module('app.contact')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -13,16 +13,16 @@
 
     function getStates() {
         return [{
-            state: 'home',
+            state: 'contact',
             config: {
-                url: '/',
-                templateUrl: 'app/home/home.html',
-                controller: 'HomeController',
+                url: '/contact',
+                templateUrl: 'app/contact/contact.html',
+                controller: 'ContactController',
                 controllerAs: 'vm',
-                title: 'Home',
+                title: 'Contact',
                 settings: {
-                    nav: 1,
-                    content: 'Home'
+                    nav: 4,
+                    content: 'Contact'
                 }
             }
         }];

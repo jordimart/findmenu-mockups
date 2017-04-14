@@ -3,8 +3,12 @@
 
     angular.module('app', [
         'app.core',
+        'app.layout',
         'app.home',
-        'app.layout'
+        'app.blog',
+        'app.about',
+        'app.contact'
+
     ]);
 
 })();
