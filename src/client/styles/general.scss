@@ -38,15 +38,25 @@
                 padding-left: 10px;
             }
             .navbar-nav {
+                .active {
+                    a {
+                        background-color: transparent;
+                    }
+                    a:after {
+                        border-bottom: 2px solid #42B574;
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        left: 25%;
+                        width: 50%;
+                    }
+                }
                 li {
                     padding-top: 8px;
                     padding-bottom: 14px;
                     a {
                         padding-bottom: 6px;
                         color: white;
-                        &:hover {
-                            border-bottom: 2px solid #42B574;
-                        }
                     }
                 }
             }
