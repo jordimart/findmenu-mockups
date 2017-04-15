@@ -1,10 +1,66 @@
 <section id="home">
-    <div class="text-vertical-center">
-        <div class="container">
-            <div class="row">
-                <label>{{'TEST' | translate}}
-                </label>
+    <div class="image-wrapper">
+        <section class="image-content">
+            <div class="container">
+                <div class="col-md-8 info-text">
+                    <h1>RECUERDA Y COMPARTE DONDE HAS ENCONTRADO EL MEJOR MENU</h1>
+                    <p>Con Findmenu prodrás recordar en que lugares comiste bien a precio de menu, además podrás compartirlo y dejar que tus amigos visiten tus lugares favoritos o visitar los suyos cuando te haga falta.
+                </div>
+                <div class="col-md-4 card-search">
+                    <h3>Busca tu menú aquí</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="sel1">Población:</label>
+                            <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                            <br>
+                            <label for="sel1">Tipo:</label>
+                            <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                            <br>
+                            <label for="sel1">Precio:</label>
+                            <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                            <br>
+                            <button type="button" class="btn btn-block btn-success">Buscar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </section>
+    </div>
+    <div class="home-content">
+        <div class="container">
+            <section class="last-menus">
+                <h1>carousel últimos menus</h1>
+                <div class="slick-container">
+                    <slick infinite=true slides-to-show=5 slides-to-scroll=5 autoplay=true autoplaySpeed=4000 arrows=false mobileFirst=true>
+                        <div class="slick-item" ng-repeat="image in images">
+                            <img src="{{ image.url }}" />
+                        </div>
+                    </slick>
+                </div>
+            </section>
+            <section class="best-menus">
+                <h1>carousel menus más visitados</h1>
+            </section>
+            <section class="last-post">
+                <h1>carousel últimas noticias</h1>
+            </section>
         </div>
     </div>
+
+
 </section>
