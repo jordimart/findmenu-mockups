@@ -8,3 +8,16 @@ $hovertext: #2EFE2E;
 $font-stack: 'Open Sans',
 sans-serif;
 //Configuraciones
+//Responsive
+@mixin for-size($size) {
+    @if $size==phone {
+        @media only screen and (max-width: 576px) and (min-width: 400px) {
+            @content;
+        }
+    }
+    @else if $size==tablet {
+        @media only screen and (max-width: 767px) and (min-width: 578px) {
+            @content;
+        }
+    }
+}

@@ -8,15 +8,8 @@
         border-color: #0a1923;
         .navbar-top {
             border-bottom: 0.5px solid grey;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding-top: 9px;
             padding-bottom: 9px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 25px;
-            padding-right: 25px;
             .social-login {
                 padding: 0px;
                 margin: 0px;
@@ -34,7 +27,6 @@
             .logo {
                 width: 165px;
                 height: 35px;
-                padding-left: 10px;
             }
             .navbar-nav {
                 .active {
@@ -85,3 +77,10 @@
         }
     }
 }
+
+
+/*Responsive*/
+
+@include for-size(phone) {}
+
+@include for-size(tablet) {}

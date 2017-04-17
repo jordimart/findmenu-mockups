@@ -32,30 +32,35 @@
     </nav>-->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-top">
-            <div class="login">
-                <a href="/login">Login</a>
+            <div class="container">
+                <div class="login col-md-10 col-xs-6">
+                    <a href="/login">Login</a>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <ul class="social-login list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="social-login list-inline">
-                <li>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                </li>
-            </ul>
         </div>
         <div class="navbar-panel">
-            <div class="navbar-brand">
-                <a href="/"><img class="logo" src="../images/logo.png" /></a>
-            </div>
-            <ul class="nav navbar-nav navbar-left">
-                <li ng-class="{'active': vm.isCurrent(r)}" ng-repeat="r in vm.navRoutes">
-                    <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
-                </li>
-                <!-- <li class="nav-item dropdown">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="/"><img class="logo" src="../images/logo.png" /></a>
+                </div>
+                <ul class="nav navbar-nav navbar-left">
+                    <li ng-class="{'active': vm.isCurrent(r)}" ng-repeat="r in vm.navRoutes">
+                        <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="hidden-sm hidden-md">{{'LANGUAGE'|translate}}</span> <span class="glyphicon glyphicon-menu-down"></span>
 
@@ -66,8 +71,8 @@
                         <a ng-click="vm.setLang('ca')" translate="CATALA">Catala</a>
                     </div>
                 </li>-->
-            </ul>
+                </ul>
+            </div>
         </div>
-
     </nav>
     <section>
