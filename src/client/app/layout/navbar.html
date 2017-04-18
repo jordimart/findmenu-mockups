@@ -69,7 +69,7 @@
         <div ng-click="arrow = !arrow" ng-class="{'hamburger': !arrow, 'arrow-left': arrow}" class="nav-toggle">
             <span></span>
         </div>
-        <div class="sidebar" ng-class="{'show' : arrow }">
+        <div class="sidebar-left" ng-class="{'show' : arrow }">
             <ul>
                 <li ng-class="{ 'active': vm.isCurrent(r)} " ng-repeat="r in vm.navRoutes ">
                     <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>
@@ -77,9 +77,27 @@
 
             </ul>
         </div>
-
-
-
+        <div ng-click="active = !active" ng-class="{ 'active-nav': active}" class="nav-toggle-contact">
+            <span></span>
+        </div>
+        <div class="sidebar-right" ng-class="{'show-right' : active }">
+            <div>
+                <a href="/login">Login</a>
+            </div>
+            <div style="text-align: center">
+                <ul class="social-login list-inline ">
+                    <li>
+                        <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
     </nav>
     <section>
