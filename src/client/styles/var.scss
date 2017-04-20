@@ -14,7 +14,7 @@ sans-serif;
         }
     }
     @else if $size==tablet {
-        @media only screen and (max-width: 767px) and (min-width: 578px) {
+        @media only screen and (max-width: 767px) {
             @content;
         }
     }
