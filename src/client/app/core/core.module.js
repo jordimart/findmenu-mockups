@@ -5,7 +5,7 @@
         .module('app.core', [
             'ngAnimate', 'ngSanitize', 'ngCookies',
             'blocks.exception', 'blocks.logger', 'blocks.router', 'blocks.mockdata',
-            'ui.router', 'ngplus', 'pascalprecht.translate', 'slickCarousel'
+            'ui.router', 'ngplus', 'pascalprecht.translate', 'slickCarousel',
         ]).factory('MyErrorHandler', function($q, $log) {
             return function(part, lang, response) {
                 $log.error('The "' + part + '/' + lang + '" part was not loaded. ' + response);

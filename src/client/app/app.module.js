@@ -7,7 +7,8 @@
         'app.home',
         'app.blog',
         'app.about',
-        'app.contact'
+        'app.contact',
+        'app.widgets'
 
     ]);
 
