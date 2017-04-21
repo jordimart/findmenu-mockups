@@ -1,8 +1,27 @@
 @import 'var';
-
-#contact{
+#contact {
     padding: 130px 0px 0px 0px;
-    ng-map{
-        margin-top:40px !important;
+    .title {
+        text-align: center;
+        hr {
+            border-bottom: 2px solid #42B574;
+            width: 50%;
+            margin-bottom:27px;
+        }
     }
+    .contact-form{
+        background-color: rgba(10, 25, 35, 0.7);
+        padding:30px !important;
+        label{
+            color: $primary;
+        }
+        .btn-success{
+            background-color: #42B574;
+                    border-color: #42B574;
+        }
+    }
+    ng-map {
+        margin-top: 40px !important;
+    }
+    
 }

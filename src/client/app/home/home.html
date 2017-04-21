@@ -52,8 +52,10 @@
     <div class="home-content">
         <div class="container">
             <section class="last-menus">
-                <h1>Sugerencias</h1>
+                <div class="title"><h1>Sugerencias</h1>
                 <hr>
+                </div>
+                
                 <div class="slick-container">
                     <slick infinite=true slides-to-show=3 slides-to-scroll=1 autoplay=false autoplaySpeed=4000 arrows=false mobileFirst=true responsive=vm.breakpoints>
                         <div class="slick-item" ng-repeat="card in vm.cards">
@@ -88,8 +90,9 @@
                 </div>
             </section>
             <section class="best-menus ">
-                <h1>Ranking de favoritos</h1>
+                <div class="title"><h1>Ranking de favoritos</h1>
                 <hr>
+                </div>
                 <div class="slick-container">
                     <slick infinite=true slides-to-show=3 slides-to-scroll=1 autoplay=false autoplaySpeed=4000 arrows=false mobileFirst=true responsive=vm.breakpoints>
                         <div class="slick-item" ng-repeat="card in vm.cards">
@@ -122,8 +125,9 @@
                 </div>
             </section>
             <section class="last-post">
-                <h1>Últimas noticias</h1>
+                <div class="title"><h1>Últimas noticias</h1>
                 <hr>
+                <div class="title">
                 <div class="slick-container">
                     <slick infinite=true slides-to-show=2 slides-to-scroll=1 autoplay=false autoplaySpeed=4000 arrows=false mobileFirst=true responsive=vm.breakpoints>
                         <div class="slick-item" ng-repeat="post in vm.posts">
