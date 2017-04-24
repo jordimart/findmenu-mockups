@@ -1,7 +1,14 @@
 @import 'var';
 #blog {
+    #banner {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("../images/pizza.jpg");
+        background-size: cover;
+        height: 300px;
+    }
     .blog-content {
-        padding: 140px 0px;
+        padding: 20px 0px;
         .posts-content {
             padding: 40px 0px;
             .wrapper-post {

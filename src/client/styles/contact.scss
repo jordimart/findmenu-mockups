@@ -1,27 +1,33 @@
 @import 'var';
 #contact {
-    padding: 130px 0px 0px 0px;
+    #banner {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("../images/pizza.jpg");
+        background-size: cover;
+        height: 300px;
+    }
+    padding: 20px 0px 0px 0px;
     .title {
         text-align: center;
         hr {
             border-bottom: 2px solid #42B574;
             width: 50%;
-            margin-bottom:27px;
+            margin-bottom: 27px;
         }
     }
-    .contact-form{
+    .contact-form {
         background-color: rgba(10, 25, 35, 0.7);
-        padding:30px !important;
-        label{
+        padding: 30px !important;
+        label {
             color: $primary;
         }
-        .btn-success{
+        .btn-success {
             background-color: #42B574;
-                    border-color: #42B574;
+            border-color: #42B574;
         }
     }
     ng-map {
         margin-top: 40px !important;
     }
-    
 }

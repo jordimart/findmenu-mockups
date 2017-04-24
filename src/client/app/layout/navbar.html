@@ -33,11 +33,15 @@
     <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg">
         <div class="navbar-top">
             <div class="container">
-                <div class="login col-md-10 col-xs-6">
+                <!--<div class="login col-md-10 col-xs-6">
                     <a href="/login">Login</a>
-                </div>
-                <div class="col-md-2 col-xs-6" style="text-align: right">
-                    <ul class="social-login list-inline ">
+                </div>-->
+                <ul class="nav navbar-nav navbar-left">
+                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+                <!--<div class="col-md-2 col-xs-6" style="text-align: right">-->
+                    <ul class="social-login nav navbar-nav navbar-right">
                         <li>
                             <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
                         </li>
@@ -48,15 +52,15 @@
                             <a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
                         </li>
                     </ul>
-                </div>
+                <!--</div>-->
             </div>
         </div>
         <div class="navbar-panel">
             <div class="container ">
-                <div class="navbar-brand ">
+                <div class="navbar-brand">
                     <a href="/ "><img class="logo " src="../images/logo.png " /></a>
                 </div>
-                <ul class="nav navbar-nav navbar-left ">
+                <ul class="nav navbar-nav navbar-left">
                     <li ng-class="{ 'active': vm.isCurrent(r)} " ng-repeat="r in vm.navRoutes ">
                         <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>
                     </li>
@@ -80,12 +84,13 @@
         <div ng-click="active = !active" ng-class="{ 'active-nav': active}" class="nav-toggle-contact">
             <span></span>
         </div>
-        <div class="sidebar-right" ng-class="{'show-right' : active }">
-            <div>
-                <a href="/login">Login</a>
-            </div>
-            <div style="text-align: center">
-                <ul class="social-login list-inline ">
+        <div class="sidebar-right" style="text-align: center" ng-class="{'show-right' : active }">
+            <ul>
+                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+             </ul>
+            <div >
+                <ul class="social-login list-inline">
                     <li>
                         <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
                     </li>

@@ -1,7 +1,14 @@
 @import 'var';
 #about {
+    #banner {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("../images/pizza.jpg");
+        background-size: cover;
+        height: 300px;
+    }
     .about-content {
-        padding: 140px 0px;
+        padding: 20px 0px;
         .info {
             .image {
                 margin-top: 20px;
