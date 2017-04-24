@@ -188,8 +188,8 @@
         border-color: #0a1923;
         .navbar-top {
             border-bottom: 0.5px solid grey;
-            padding-top: 9px;
-            padding-bottom: 9px;
+            
+           
             .social-login {
                 padding: 0px;
                 margin: 0px;
@@ -197,16 +197,21 @@
                     color: #42B574 !important;
                 }
             }
-            .login {
+            .navbar-left {
                 a {
                     color: #42B574 !important;
+                    padding-top: 5px;
+                    padding-bottom:5px;
                 }
             }
         }
         .navbar-panel {
+            .navbar-brand{
+                padding-left:5px;
             .logo {
                 width: 165px;
                 height: 35px;
+            }
             }
             .navbar-nav {
                 .active {

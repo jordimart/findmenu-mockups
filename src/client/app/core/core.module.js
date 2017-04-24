@@ -3,7 +3,7 @@
 
     angular
         .module('app.core', [
-            'ngAnimate', 'ngSanitize', 'ngCookies',
+            'ngAnimate', 'ngSanitize', 'ngCookies','ui.bootstrap',
             'blocks.exception', 'blocks.logger', 'blocks.router', 'blocks.mockdata',
             'ui.router', 'ngplus', 'pascalprecht.translate', 'slickCarousel',
         ]).factory('MyErrorHandler', function($q, $log) {

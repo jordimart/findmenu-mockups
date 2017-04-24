@@ -1,0 +1,39 @@
+<section id="restaurants">
+        <section id="banner">
+        </section>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">Filtros</a>
+                </div>
+                <div class="btn-group">
+                        <label class="btn btn-success navbar-btn" ng-model="vm.radioModel" uib-btn-radio="'breackfast_price'" ng-click="vm.changeTags()">Almuerzo</label>
+                        <label class="btn btn-success navbar-btn" ng-model="vm.radioModel" uib-btn-radio="'lunch_price'" ng-click="vm.changeTags()">Comida</label>
+                        <label class="btn btn-success navbar-btn" ng-model="vm.radioModel" uib-btn-radio="'dinner_price'" ng-click="vm.changeTags()">Cena</label>
+                        <label class="btn btn-success navbar-btn" ng-model="vm.radioModel" uib-btn-radio="'valoration'" ng-click="vm.changeTags()">Valoración</label>
+                        <label class="btn btn-success navbar-btn" ng-model="vm.radioModel" uib-btn-radio="'users'" ng-click="vm.changeTags()">Usuarios</label>                      
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="/restaurants/list"><span class="glyphicon glyphicon-list"></span> Lista</a></li>
+                </ul>
+                </div>
+                </nav>
+        <div id="restaurants-map">
+                <ng-map zoom="16" >
+               
+                
+                <custom-marker id="{{c.name}}"  ng-repeat="c in vm.cards" position="{{c.lat}},{{c.lon}}">
+                       
+                <div><span class="label label-info">{{c.breackfast_price}}</span></div>  
+                <div><img width="64" src="{{vm.findmenuIcon}}" align="left" /></div>
+           
+                </custom-marker>
+                 <marker id="user" icon="{{vm.userIcon}}" position="current" animation="Animation.BOUNCE" centered="true" >
+                        
+                 </marker>
+                 
+                </ng-map>
+        </div>
+        
+</section>
