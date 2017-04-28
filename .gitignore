@@ -9,3 +9,6 @@ report/
 .tmp
 *.env
 config.db.js
+
+# ficheros pycharm
+.idea/
