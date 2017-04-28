@@ -9,7 +9,8 @@
         'app.blog',
         'app.about',
         'app.contact',
-        'app.restaurants'
+        'app.restaurants',
+        'app.login'
     ]);
 
 })();
