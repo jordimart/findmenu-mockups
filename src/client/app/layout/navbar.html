@@ -1,4 +1,4 @@
-<section id="navbar-main" ng-controller="NavbarController as vm">
+<section id="navbar-main">
     <!--<nav class="navbar navbar-default" ng-controller="NavbarController as vm">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
@@ -30,35 +30,15 @@
 
         </div>
     </nav>-->
-    
-    <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg">
+
+    <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg" ng-controller="NavbarController as vm">
         <div class="navbar-top">
             <div class="container">
-                <!--<div class="login col-md-10 col-xs-6">
-                    <a href="/login">Login</a>
-                </div>-->
-                <ul class="nav navbar-nav navbar-left">
-                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-                <!--<div class="col-md-2 col-xs-6" style="text-align: right">-->
-                    <login-access></login-access>
-                    <ul class="social-login nav navbar-nav navbar-right">
-                        <li>
-                            <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
-                        </li>
-                        <li>
-                            <a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a>
-                        </li>
-                        <li>
-                            <a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
-                        </li>
-                    </ul>
-                <!--</div>-->
+                <login-access></login-access>
             </div>
         </div>
         <div class="navbar-panel">
-            <div class="container ">
+            <div class="container">
                 <div class="navbar-brand">
                     <a href="/ "><img class="logo " src="../images/logo.png " /></a>
                 </div>
@@ -66,12 +46,11 @@
                     <li ng-class="{ 'active': vm.isCurrent(r)} " ng-repeat="r in vm.navRoutes ">
                         <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
-    <nav class=" hidden-sm hidden-md hidden-lg xs navbar-fixed-top">
+    <nav class=" hidden-sm hidden-md hidden-lg xs navbar-fixed-top" ng-controller="NavbarController as vm">
         <div ng-click="arrow = !arrow" ng-class="{'hamburger': !arrow, 'arrow-left': arrow}" class="nav-toggle">
             <span></span>
         </div>
@@ -83,28 +62,6 @@
 
             </ul>
         </div>
-        <div ng-click="active = !active" ng-class="{ 'active-nav': active}" class="nav-toggle-contact">
-            <span></span>
-        </div>
-        <div class="sidebar-right" style="text-align: center" ng-class="{'show-right' : active }">
-            <ul>
-                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-             </ul>
-            <div >
-                <ul class="social-login list-inline">
-                    <li>
-                        <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
-                    </li>
-                    <li>
-                        <a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a>
-                    </li>
-                    <li>
-                        <a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
+        <login-access-xs></login-access-xs>
     </nav>
     <section>
