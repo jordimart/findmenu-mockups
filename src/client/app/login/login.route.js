@@ -13,21 +13,11 @@
 
   function getStates() {
     return [{
-      state: 'signup',
-      config: {
-        url: '/signup',
-        templateUrl: 'app/login/signup.html',
-        controller: 'SignupController',
-        controllerAs: 'vm',
-        title: 'Signup'
-      }
-    }, {
       //Devuelve al usuario que está en sesión
       state: 'socialsignin',
       config: {
         url: '/socialsignin',
         controller: 'socialController'
-
       }
     }, {
       //Devuelve al usuario que está en sesión

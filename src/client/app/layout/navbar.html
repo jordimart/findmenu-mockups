@@ -31,13 +31,13 @@
         </div>
     </nav>-->
 
-    <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg" ng-controller="NavbarController as vm">
+    <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg" >
         <div class="navbar-top">
             <div class="container">
                 <login-access></login-access>
             </div>
         </div>
-        <div class="navbar-panel">
+        <div class="navbar-panel" ng-controller="NavbarController as vm">
             <div class="container">
                 <div class="navbar-brand">
                     <a href="/ "><img class="logo " src="../images/logo.png " /></a>
@@ -50,11 +50,11 @@
             </div>
         </div>
     </nav>
-    <nav class=" hidden-sm hidden-md hidden-lg xs navbar-fixed-top" ng-controller="NavbarController as vm">
+    <nav class=" hidden-sm hidden-md hidden-lg xs navbar-fixed-top" >
         <div ng-click="arrow = !arrow" ng-class="{'hamburger': !arrow, 'arrow-left': arrow}" class="nav-toggle">
             <span></span>
         </div>
-        <div class="sidebar-left" ng-class="{'show' : arrow }">
+        <div class="sidebar-left" ng-class="{'show' : arrow }" ng-controller="NavbarController as vm">
             <ul>
                 <li ng-class="{ 'active': vm.isCurrent(r)} " ng-repeat="r in vm.navRoutes ">
                     <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>

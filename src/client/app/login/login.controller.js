@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
     angular
         .module('app.login')
@@ -13,39 +13,77 @@
 
         var vm = this;
         $translatePartialLoader.addPart('layout');
-        vm.inputUser = '';
-        vm.inputPass = '';
+        vm.loginUser = '';
+        vm.loginPass = '';
+        vm.registerUser = '';
+        vm.registerEmail = '';
+        vm.registerPass = '';
+        vm.registerPass2 = '';
         vm.SubmitLogin = SubmitLogin;
-        vm.RedirectSignup = RedirectSignup;
+        vm.SubmitSignup = SubmitSignup;
+        vm.Close = Close;
 
         function SubmitLogin() {
-            var data = {
+            /*var data = {
                 'user': vm.inputUser,
                 'password': vm.inputPass
-            };
+            };*/
 
-            var dataUserJSON = JSON.stringify(data);
-            dataservice.localSignin(dataUserJSON).then(function(response) {
-                console.log(response);
-                if (response.data.user === vm.inputUser) {
-                    logger.success('Usuario autentificado');
-                    cookiesService.SetCredentials(response.data);
-                    $uibModalInstance.dismiss('cancel');
-                    headerService.login();
-                } else if (response.data === 'errorcredentials') {
-                    logger.error(
-                        'Error en las credenciales, el usuario o la contraseña no son correctos'
-                    );
-                } else {
-                    logger.error('Error en el server');
-                }
+            //var dataUserJSON = JSON.stringify(data);
+            //dataservice.localSignin(dataUserJSON).then(function(response) {
 
-            });
+            if ('admin' === vm.loginUser && vm.loginPass === 'admin') {
+                logger.success('Usuario autentificado');
+                // cookiesService.SetCredentials(response.data);
+                $uibModalInstance.close();
+                headerService.login();
+            } else if (response.data === 'errorcredentials') {
+                logger.error(
+                    'Error en las credenciales, el usuario o la contraseña no son correctos'
+                );
+            } else {
+                logger.error('Error en el server');
+            }
+
+            // }
+            //)
+
         }
 
-        function RedirectSignup() {
-            $uibModalInstance.dismiss('cancel');
-            $state.go('signup');
+        function SubmitSignup() {
+
+            if (vm.registerPass === vm.registerPass2) {
+
+                var data = {
+                    'user': vm.registerUser,
+                    'email': vm.registerEmail,
+                    'password': vm.registerPass,
+                    'usertype': 'client'
+                };
+
+                //var dataUserJSON = JSON.stringify(data);
+                //dataservice.signup(dataUserJSON).then(function(response) {
+                    if ('admin' === vm.registerUser) {
+                        logger.success('Usuario registrado');
+                        $uibModalInstance.close();
+                    } else {
+                        if (response.data === 'name') {
+                            logger.warning('Ya existe un usuario con ese nombre');
+
+                        } else if (response.data === 'err') {
+                            logger.error('Error en el server');
+                        }
+                    }
+               // });
+            } else {
+                logger.warning('Los dos passwords deben ser iguales');
+
+            }
         }
+        function Close(){
+            $uibModalInstance.close();
+        }
+
+        
     }
 })();

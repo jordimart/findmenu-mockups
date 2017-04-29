@@ -59,10 +59,12 @@
 
       var modalInstance = $uibModal.open({
         animation: 'true',
+        
         templateUrl: 'app/login/login.html',
+        windowClass:'modal-center modal fade in',
         controller: 'LoginController',
         controllerAs: 'vm',
-        size: 'lg'
+        size: 'sm'
       });
     }
 

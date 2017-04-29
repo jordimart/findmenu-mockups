@@ -20,7 +20,7 @@
         /* @ngInject */
         function TopNavController(headerService) {
             var vm = this;
-            vm.showModalSignup = showModalSignup;
+            vm.showLogin = showLogin;
             vm.logout = logout;
 
             activate();
@@ -29,7 +29,7 @@
                 headerService.login();
             }
 
-            function showModalSignup() {
+            function showLogin() {
                 headerService.openLoginModal();
             }
 
