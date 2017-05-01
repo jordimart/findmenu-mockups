@@ -24,13 +24,14 @@
         $rootScope.accederV = false;
         $rootScope.profileV = true;
         $rootScope.logoutV = true;
-        $rootScope.avatar = user.avatar;
+        //$rootScope.avatar = user.avatar;
+        $rootScope.user = user.user;
 
-        if (user.name.length === 1) {
+       /* if (user.user.length === 1) {
           $rootScope.name = user.email;
         } else {
           $rootScope.name = user.name;
-        }
+        }*/
 
         //redirigimos al home si nos logueamos
         $state.go('home');

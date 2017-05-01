@@ -24,17 +24,17 @@
         vm.Close = Close;
 
         function SubmitLogin() {
-            /*var data = {
-                'user': vm.inputUser,
-                'password': vm.inputPass
-            };*/
+            var data = {
+                'user': vm.loginUser,
+                'password': vm.loginPass
+            };
 
             //var dataUserJSON = JSON.stringify(data);
             //dataservice.localSignin(dataUserJSON).then(function(response) {
 
-            if ('admin' === vm.loginUser && vm.loginPass === 'admin') {
+            if ('admin' === vm.loginUser && 'admin'  === vm.loginPass ) {
                 logger.success('Usuario autentificado');
-                // cookiesService.SetCredentials(response.data);
+                cookiesService.SetCredentials(data);
                 $uibModalInstance.close();
                 headerService.login();
             } else if (response.data === 'errorcredentials') {

@@ -5,7 +5,10 @@
         <li><img src="{{avatar}}" /></li>
 </ul>-->
 <ul class="nav navbar-nav navbar-left">
-        <li><a ng-show="accederV" ng-click="vm.showLogin()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a ng-show="accederV" ng-click="vm.showLogin()"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
+        <li><a ng-show="logoutV" class="nav-button" ng-click='vm.logout()' ><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a ng-show="profileV" href='/profile' class="profile">Bienvenido: {{user}}</a></li>
+        <!--<li><img src="{{avatar}}" /></li>-->
 </ul>
 <ul class="social-login nav navbar-nav navbar-right">
         <li>

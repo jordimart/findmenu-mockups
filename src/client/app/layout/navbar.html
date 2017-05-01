@@ -31,7 +31,7 @@
         </div>
     </nav>-->
 
-    <nav class="navbar navbar-default navbar-fixed-top hidden-xs lg" >
+    <nav class="navbar navbar-default navbar-fixed-top hidden-xs desktop" >
         <div class="navbar-top">
             <div class="container">
                 <login-access></login-access>
@@ -50,7 +50,7 @@
             </div>
         </div>
     </nav>
-    <nav class=" hidden-sm hidden-md hidden-lg xs navbar-fixed-top" >
+    <nav class=" hidden-sm hidden-md hidden-lg navbar-fixed-top responsive" >
         <div ng-click="arrow = !arrow" ng-class="{'hamburger': !arrow, 'arrow-left': arrow}" class="nav-toggle">
             <span></span>
         </div>
@@ -59,7 +59,6 @@
                 <li ng-class="{ 'active': vm.isCurrent(r)} " ng-repeat="r in vm.navRoutes ">
                     <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>
                 </li>
-
             </ul>
         </div>
         <login-access-xs></login-access-xs>

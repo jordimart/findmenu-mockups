@@ -10,7 +10,8 @@
         var service = {
 
             getMockRestaurants: getMockRestaurants,
-            getMockPosts: getMockPosts
+            getMockPosts: getMockPosts,
+            getMockUsers: getMockUsers
 
         };
 
@@ -37,6 +38,17 @@
                 { image: '../images/pizza.jpg', name: 'Noticia 4', text_resume: 'Suspendisse scelerisque sed ante quis cursus. Donec tempus justo convallis condimentum volutpat. Nunc et auctor massa.' },
                 { image: '../images/salad.jpg', name: 'Noticia 5', text_resume: 'Aenean consequat turpis a nunc rhoncus, finibus finibus augue commodo.' },
                 { image: '../images/finger-food.jpg', name: 'Noticia 6', text_resume: 'Proin risus leo, volutpat non enim in, accumsan blandit elit. Donec a risus sodales, porta nisl gravida, porta augue. Morbi quis ligula id dolor eleifend fermentum ac at ipsum.' },
+            ];
+        }
+
+        function getMockUsers() {
+            return [
+                { image: '../images/jorge.png',user:'admin', name: 'Jorge', first_name:'Martínez', last_name:'Frias', email:'jordimart83@gmail.com' , city:'Ontinyent', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula tellus, vehicula et enim auctor, elementum varius enim.', restaurants:20, friendsnumber:200, datebirthday: '26/05/1983', registrationdate:'01/05/2017' },
+                { image: '../images/profile1.jpg',user:'josito', name: 'Jose', first_name:'Sanz', last_name:'Rodriguez', email:'sanz@gmail.com' ,city:'Ontinyent', text: 'Donec ultricies lacus in augue finibus, nec pulvinar nisi venenatis. Cras vestibulum egestas consequat. Proin eget aliquet nulla',restaurants:200, friendsnumber:100, datebirthday: '20/06/1990', registrationdate:'01/05/2017' },
+                { image: '../images/profile2.jpg',user:'javito', name: 'Javi', first_name:'Cuerda', last_name:'Alijo', email:'cuerda@gmail.com' ,city:'Ontinyent', text: 'Nunc lobortis tortor sit amet est faucibus, tincidunt sollicitudin lacus hendrerit. Maecenas quis purus congue,',restaurants:100, friendsnumber:400, datebirthday: '10/02/1950', registrationdate:'01/05/2017'  },
+                { image: '../images/profile3.jpg',user:'raquelita', name: 'Raquel', first_name:'Bosé',last_name:'Úbeda', email:'bose@gmail.com' ,city:'Ontinyent', text: 'Suspendisse scelerisque sed ante quis cursus. Donec tempus justo convallis condimentum volutpat. Nunc et auctor massa.',restaurants:300, friendsnumber:245, datebirthday: '15/08/1991', registrationdate:'01/05/2017'  },
+                { image: '../images/profile4.jpg',user:'josefita', name: 'Josefa', first_name:'Fernandez', last_name:'Gramaje', email:'fernandez@gmail.com' ,city:'Ontinyent', text: 'Aenean consequat turpis a nunc rhoncus, finibus finibus augue commodo.',restaurants:150, friendsnumber:432, datebirthday: '22/09/1945', registrationdate:'01/05/2017'  },
+                { image: '../images/profile5.jpg',user:'lolita', name: 'Lola', first_name:'Mesa',last_name:'Pérez', email:'mesa@gmail.com' ,city:'Ontinyent', text: 'Proin risus leo, volutpat non enim in, accumsan blandit elit. Donec a risus sodales, porta nisl gravida, porta augue. Morbi quis ligula id dolor eleifend fermentum ac at ipsum.',restaurants:1, friendsnumber:20, datebirthday: '25/11/2005', registrationdate:'01/05/2017'  },
             ];
         }
     }

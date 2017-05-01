@@ -1,118 +1,108 @@
-<section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-            md-component-id="left"
-            md-is-locked-open="$mdMedia('gt-xs')">
-            <md-toolbar class="md-warn">
-                <div class="md-toolbar-tools">
-                <h1 class="md-display-4">{{name}}</h1>
-            </div>
-            </md-toolbar>
-            <md-card>
-                <img alt="Gravatar image"
-                    src={{avatar}}>
-                <md-card-content>
-                    <h2 class="md-title">About Me</h2>
-                    <p>
-                        A passionate Blogger and Developer.
-                        He has more then 5 years of experience on web application development.
-                        He loves to work in javascript programming language.At present he is
-                        exploring W3C Web Component specification.
-                    </p>
-                </md-card-content>
-            </md-card>
-        </md-sidenav>
-        <md-content layout="row">
-            <md-card flex-xs flex-gt-xs="50">
-               <!--<img alt="Education"
-                    src="image/table-chair.jpg">-->
-               <md-card-content>
-                   <h2 class="md-title">My profile</h2>
-                   <md-list>
-                       <md-list-item class="md-1-line">
-                          <form role="form">
-	   <div class="form-group">
-	      <label for="name">name</label>
-	      <input type="name" class="form-control" id="fname" placeholder="Enter name" ng-model="vm.name" >
-	   </div>
-                              <div class="form-group">
-	      <label for="name">last name</label>
-	      <input type="name" class="form-control" id="fname" placeholder="Enter name" ng-model="vm.lastname" >
-	   </div>
-                              
-	   <div class="form-group">
-	      <div flex-gt-xs>
-      <h4>Standard date-picker</h4>
-      <md-datepicker ng-model="vm.birthday" md-placeholder="Enter date"></md-datepicker>
-    </div>
-	   </div>
-	   <div class="form-group">
-	      <label for="email">Email</label>
-	      <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="vm.email" >
-	   </div>
-	    <div class="control-group">
-                <label class="pefil">Pais:</label>
-                <p>
-                    <select name="country" id="country" ng-model="vm.country" 
-                            ng-options="item.sName for item in country" placeholder="Pais"  ng-change="resetCountry()"> 
-                        <option value="">{{vm.country}}</option>
-                    </select>
-                    <span class="text-danger" ng-show="AlertMessage" ng-model="user.pais_error">{{user.pais_error}}</span>
-                </p>
-            </div>
-            <div class="control-group">
-                <label class="pefil">Provincia:</label>
-                <p>
-                    <select name="province" id="province" ng-model="vm.province"
-                            ng-options="item.nombre for item in province"  
-                     placeholder="Provincia" ng-change="resetValues()" ng-disabled="profile.country.sISOCode!='ES'">
-                        <option value="">Seleccione una provincia</option>
-                    </select>
-                    <span class="text-danger" ng-show="AlertMessage" ng-model="user.prov_error">{{user.prov_error}}</span>
-                </p>
-            </div>
-            <div class="control-group">
-                <label class="pefil">Poblacion:</label>
-                <p>
-                    <select  name="city" id="city" ng-model="vm.city"
-                          ng-options="item.poblacion for item in cities 
-                          "placeholder="Poblacion" ng-disabled="profile.country.sISOCode!='ES'"> 
-                        <option value="">Seleccione una ciudad</option>
-                    </select>
-                    <span class="text-danger" ng-show="AlertMessage" ng-model="user.pob_error">{{user.pob_error}}</span>
-                </p>
-                 <br/>
-            
-            </div>
-	   </div>
-	     <button type="submit" class="btn btn-default">Modify</button>
-	</form>
-                       </md-list-item>
-                    </md-list>
-               </md-card-content>
-           </md-card>
-            
-            <md-card flex-xs flex-gt-xs="50">
-                <!--<img alt="Contact Me"
-                     src="image/contact-me.jpg">-->
-                <md-card-content>
-                    <h2 class="md-title">Contact Me</h2>
-                    <div layout>
-                        <div flex="20" layout layout-align="left center">
-                            <span class="md-body-1 md-primary">Email</span>
-                        </div>
-                        <span flex class="md-primary" layout-align="left center">
-                            sandeeppateltech@gmail.com
-                        </span>
-                    </div>
-                    <div layout>
-                        <div flex="20" layout layout-align="left center">
-                            <span class="md-body-1 md-primary">Blog</span>
-                        </div>
-                        <span flex class="md-primary" layout-align="left center">
-                            www.tutorialsavvy.com
-                        </span>
-                    </div>
-                </md-card-content>
-            </md-card>
-        </md-content>
+<section id="profile">
+    <section id="banner">
     </section>
+    <div id="wrapper-profile" class="container">
+        <div class="data-card col-md-12">
+
+            <div class="data-profile col-md-12">
+                <h1>{{vm.user}}</h1>
+                <div class="profile-image col-md-2">
+                    <img class="image" src="../images/jorge.png" />
+
+                </div>
+                <div class="profile-content col-md-10" ng-class="{'show-form' : formcontrol }">
+                    <h3>Sobre mi</h3>
+                    <p>{{vm.text}}</p>
+                    <div class="profile-data-1 col-md-6">
+                        <p><strong>Nombre:</strong>{{vm.name}}</p>
+                        <p><strong>Apellidos:</strong>{{vm.firstname}}{{vm.lastname}}</p>
+                        <p><strong>Email:</strong>{{vm.email}}</p>
+                        <p><strong>Fecha de nacimiento:</strong>{{vm.birthdate}}</p>
+                    </div>
+                    <div class="profile-data-2 col-md-6">
+                        <p><strong>Población:</strong>{{vm.city}}</p>
+                        <p><strong>Restaurantes:</strong>{{vm.restaurantnumber}}</p>
+                        <p><strong>Amigos:</strong>{{vm.friendsnumber}}</p>
+                        <p><strong>Fecha de registro:</strong>{{vm.registrationdate }}</p>
+                    </div>
+                    <div class="modify-button">
+                        <button class="btn btn-success" ng-click="formcontrol = !formcontrol">Modificar</button>
+                    </div>
+                </div>
+
+                <div class="profile-form col-md-10" ng-class="{'show-form' : !formcontrol }">
+                    <h3>Sobre mi</h3>
+                    <form name="profileForm" novalidate>
+                        <div class="form-group col-md-12">
+                            <textarea class="form-control" rows="3">{{vm.text}}</textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" name="name" ng-model="vm.name" class="form-control" placeholder="Nombre">
+                            <input type="text" name="firstname" ng-model="vm.firstname" class="form-control" placeholder="Primer apellido">
+                            <input type="text" name="lastname" ng-model="vm.lastname" class="form-control" placeholder="Segundo apellido">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" name="email" ng-model="vm.email" class="form-control" placeholder="Email">
+                            <span class="label label-danger" ng-show="profileForm.email.$error.email && !profileForm.email.$pristine">
+                             Email no válido!</span>
+                            <input type="text" name="birthdate" ng-model="vm.birthdate" class="form-control" placeholder="Fecha de nacimiento">
+                            <input type="text" name="city" ng-model="vm.city" class="form-control" placeholder="Población">
+                        </div>
+
+                        <div class="modify-button">
+                            <button class="btn btn-success" type="submit" ng-disabled="!profileForm.$valid" ng-click="vm.SubmitProfile()">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="extra-profile col-md-12">
+            <div class="row menu-items">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><button class="btn btn-success" href="#"><span class="glyphicon glyphicon-list"></span> Lista</button></li>
+                    <li><button class="btn btn-success" href="#"><span class="glyphicon glyphicon-th-large"></span> Foto</button></li>
+                </ul>
+            </div>
+            <div class="user-menus row">
+                <h2>Mis restaurantes</h2>
+                <hr>
+                <div class="slick-container">
+                    <slick infinite=true slides-to-show=5 slides-to-scroll=1 autoplay=true autoplaySpeed=4000 arrows=false mobileFirst=true
+                        responsive=vm.breakpoints>
+                        <div class="slick-item" ng-repeat="restaurant in vm.restaurants">
+                            <article class="card">
+                                <div class="image" style="background-image: url({{restaurant.image }});">
+                                    <span class="card-title">
+					                    <h3>{{restaurant.name}}</h3>
+				                    </span>
+                                </div>
+                            </article>
+                        </div>
+                    </slick>
+                </div>
+
+            </div>
+            <div class="user-friends row">
+                <h2>Mis amigos findmenu</h2>
+                <hr>
+                <div class="slick-container">
+                    <slick infinite=true slides-to-show=5 slides-to-scroll=1 autoplay=true autoplaySpeed=4000 arrows=false mobileFirst=true
+                        responsive=vm.breakpoints>
+                        <div class="slick-item" ng-repeat="friend in vm.friends">
+                            <article class="card">
+                                <div class="image" style="background-image: url({{friend.image}});">
+                                    <span class="card-title">
+					                    <h3>{{friend.user}}</h3>
+				                    </span>
+                                </div>
+                            </article>
+                        </div>
+                    </slick>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

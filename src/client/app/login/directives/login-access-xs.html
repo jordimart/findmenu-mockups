@@ -4,6 +4,8 @@
 <div class="sidebar-right" style="text-align: center" ng-class="{'show-right' : active }">
     <ul>
         <li><a ng-show="accederV" ng-click="vm.showLogin()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a ng-show="logoutV" class="nav-button" ng-click='vm.logout()' ><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a ng-show="profileV" href='/profile' class="profile">Bienvenido:  {{user}}</a></li>
     </ul>
     <div>
         <ul class="social-login list-inline">
