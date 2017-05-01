@@ -29,7 +29,7 @@ module.exports = function() {
         build: './build/',
         client: client,
         css: temp + '*.css',
-        fonts: bower.directory + 'font-awesome/fonts/**/*.*',
+        fonts: [ bower.directory + 'font-awesome/fonts/**/*.*',bower.directory + 'bootstrap/fonts/**/*.*' ],
         html: client + '**/*.html',
         htmltemplates: clientApp + '**/*.html',
         images: client + 'images/**/*.*',
