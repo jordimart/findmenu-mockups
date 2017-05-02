@@ -137,3 +137,42 @@
         }
     }
 }
+
+/*Responsive*/
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    #about {
+        #banner {
+            height: 100px;
+        }
+        .container {
+            padding: 0px;
+            .about-content{
+                .info{
+                    .image{
+                        padding:0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #contact {
+        #banner {
+            height: 200px;
+        }
+    }
+}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {}

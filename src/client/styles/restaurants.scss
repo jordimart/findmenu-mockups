@@ -12,6 +12,14 @@
         border-radius: 0px;
         background-color: #0a1923;
         border-color: #0a1923;
+        .container-fluid{
+            .btn-group{
+                .btn.active {
+                        background-color:orange;
+                        border-color: orange;
+                    }      
+            }
+        }
     }
     #restaurants-map {
         .ng-map-info-window {
@@ -73,3 +81,26 @@
         }
     }
 }
+
+/*Responsive*/
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+     #restaurants {
+        #banner {
+            height: 100px;
+        }
+     }
+}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {}

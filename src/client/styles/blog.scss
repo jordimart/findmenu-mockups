@@ -78,3 +78,51 @@
         }
     }
 }
+
+
+/*Responsive*/
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    #blog {
+        #banner {
+            height: 100px;
+        }
+        .blog-content {
+            padding: 0px;
+            .search-content {
+                padding: 0px;
+                .aside {
+                    .form-search-submit {
+                        top: 78px;
+                        right: 7px;
+                    }
+                }
+            }
+            .posts-content {
+                padding: 20px 0px;
+                .wrapper-post {
+                    padding: 15px 0px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #blog {
+        #banner {
+            height: 200px;
+        }
+    }
+}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {}

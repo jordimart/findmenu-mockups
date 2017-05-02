@@ -1,5 +1,13 @@
 @import "var";
 
+
+a{
+    text-decoration:none;
+    &:hover{
+        text-decoration:none;
+    }
+}
+
 /*Stilo de la barra de navegación principal*/
 
 #navbar-main {
@@ -158,6 +166,17 @@
 
 /*Responsive*/
 
-@include for-size(phone) {}
 
-@include for-size(tablet) {}
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {}
